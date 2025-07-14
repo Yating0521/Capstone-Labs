@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Message</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showMsg(idx) {
+            var msgs = [
+                { title: 'Upcoming Event Recruitment', sender: 'Rachel', date: 'July 5, 2025', content: 'Join us for our next event! We need volunteers for setup and greeting.' },
+                { title: 'Welcome to Dog Town Level 1!', sender: 'Volunteer Admin Team', date: 'July 2, 2025', content: 'Congratulations on reaching Dog Town Level 1! Thank you for your dedication.' }
+            ];
+            var detail = document.getElementById('msg-detail');
+            detail.innerHTML = '<h2>' + msgs[idx].title + '</h2>' +
+                '<p><strong>From:</strong> ' + msgs[idx].sender + '</p>' +
+                '<p><strong>Date:</strong> ' + msgs[idx].date + '</p>' +
+                '<p>' + msgs[idx].content + '</p>';
+            var lis = document.querySelectorAll('.msg-list li');
+            lis.forEach(function (li, i) { li.classList.toggle('active', i === idx); });
+        }
+        window.onload = function () { showMsg(0); };
+    </script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">PawsHome</div>
+            <nav class="navbar">
+                <a href="Home.html">HOME</a>
+                <a href="schedule.html">SCHEDULE</a>
+                <a href="event.html">EVENT</a>
+                <a href="message.html">MESSAGE</a>
+                <a href="loghours.html">LOG YOUR HOURS</a>
+            </nav>
+
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="msg-container">
+            <div class="msg-list">
+                <ul>
+                    <li onclick="showMsg(0)">Upcoming Event Recruitment</li>
+                    <li onclick="showMsg(1)">Welcome to Dog Town Level 1!</li>
+                </ul>
+            </div>
+            <div class="msg-detail" id="msg-detail">
+                <!-- Message details will appear here -->
+            </div>
+        </div>
+    </main>
+    <footer>&copy; 2025 Paws Home</footer>
+</body>
+
+</html>

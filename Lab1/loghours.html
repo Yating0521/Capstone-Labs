@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Log Your Volunteer Hours</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">PawsHome</div>
+      <nav class="navbar">
+        <a href="Home.html">HOME</a>
+        <a href="schedule.html">SCHEDULE</a>
+        <a href="event.html">EVENT</a>
+        <a href="message.html">MESSAGE</a>
+        <a href="loghours.html">LOG YOUR HOURS</a>
+      </nav>
+    </div>
+  </header>
+  <main class="main-content">
+    <form class="log-form">
+      <label for="date">Date of Service:</label>
+      <input type="date" id="date" name="date" required>
+      <label for="hours">Hours Served:</label>
+      <input type="number" id="hours" name="hours" min="0.5" step="0.5" required>
+      <label for="assignment">Assignment:</label>
+      <select id="assignment" name="assignment" required>
+        <option value="">Select...</option>
+        <option value="dog-care">Dog Care</option>
+        <option value="cat-care">Cat Care</option>
+        <option value="events">Events</option>
+        <option value="admin">Administration</option>
+      </select>
+      <button class="button" type="submit">Submit Hours</button>
+    </form>
+  </main>
+  <footer>&copy; 2025 Paws Home</footer>
+</body>
+
+</html>

@@ -1,0 +1,411 @@
+/* General */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Flexbox  */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*  */
+.main-content {
+    flex: 1;
+}
+
+
+/* Header */
+.site-header {
+    position: relative;
+    background: #ff8800;
+    color: #fff;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 80px;
+}
+
+.logo {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+.navbar {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    transition: background 0.2s;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    background: #8d7fc7;
+}
+
+/* Login Button
+.login-button {
+    background: #6c5ca4;
+    color: #fff;
+    padding: 10px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: background 0.2s;
+} */
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.hero-content {
+    background: rgba(24, 21, 26, 0.82);
+    padding: 48px 60px;
+    border-radius: 18px;
+    max-width: 700px;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 18px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.hero-content p {
+    color: #fff;
+    font-size: 1.25em;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #e6005a;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    margin-right: 18px;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+/* Events Page */
+
+/* .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.card {
+    flex: 1 1 250px;
+    background: #faf8ff;
+    border: 1px solid #e0dff5;
+    border-radius: 8px;
+    padding: 18px 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+} */
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #faf8ff;
+    border: 1px solid #e0dff5;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #6c5ca4;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card-content {
+    padding: 0 15px;
+}
+
+.event-detail {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.event-info {
+    color: #666;
+    margin: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.5;
+}
+
+/* .event-info::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+
+.signup-btn {
+    display: block;
+    width: 200px;
+    margin: 25px auto 0;
+    padding: 12px 0;
+    background: #8d7fc7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.signup-btn:hover {
+    background: #6c5ca4;
+}
+
+.msg-container {
+    display: flex;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.msg-list {
+    width: 260px;
+    border-right: 1px solid #e0dff5;
+    padding: 20px 0;
+    background: #faf8ff;
+}
+
+.msg-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.msg-list li {
+    padding: 16px 24px;
+    cursor: pointer;
+    border-bottom: 1px solid #e0dff5;
+    transition: background 0.2s;
+}
+
+.msg-list li:hover,
+.msg-list li.active {
+    background: #e6f7e6;
+}
+
+.msg-detail {
+    flex: 1;
+    padding: 32px;
+}
+
+.msg-detail h2 {
+    margin-top: 0;
+}
+
+.msg-detail .empty {
+    color: #bbb;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* Schedule Page */
+.calendar {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #e0dff5;
+    cursor: pointer;
+}
+
+.calendar th {
+    background: #8d7fc7;
+    color: #fff;
+}
+
+/* Default States */
+.calendar td.available {
+    background: #e6f7e6;
+    color: #000;
+}
+
+.calendar td.selected {
+    background: #ff8800;
+    color: #fff;
+}
+
+.calendar td.unavailable {
+    background: #f5f5f5;
+    color: #bbb;
+    cursor: default;
+}
+
+/* Legend */
+.calendar .legend {
+    margin-top: 18px;
+}
+
+.calendar .legend span {
+    display: inline-block;
+    margin-right: 18px;
+}
+
+.calendar .legend .box {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    border-radius: 3px;
+}
+
+.calendar .legend .available {
+    background: #e6f7e6;
+}
+
+.calendar .legend .selected {
+    background: #ff8800;
+}
+
+.calendar .legend .unavailable {
+    background: #f5f5f5;
+}
+
+/* Shift Form */
+.calendar .shift-form {
+    margin-top: 30px;
+    display: none;
+}
+
+.calendar .shift-form.active {
+    display: block;
+}
+
+
+/* loghours page */
+.log-form {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 36px;
+}
+
+.log-form label {
+    font-weight: bold;
+}
+
+.log-form input,
+.log-form select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0 18px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.log-form button {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 18px 0;
+    background: #ff8800;
+    color: #fff;
+    margin-top: 40px;
+}
